@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yteam</title>
+  <style>
+    /* Reset sederhana */
+    body, h1, h2, h3, p, ul {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #fff;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Slideshow */
+    .slideshow-container {
+      position: relative;
+      max-width: 100%;
+      height: 400px;
+      overflow: hidden;
+    }
+
+    .slide {
+      display: none;
+      width: 100%;
+      height: 400px;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Tombol navigasi slideshow */
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.5);
+      color: #fff;
+      border: none;
+      padding: 12px;
+      cursor: pointer;
+      font-size: 18px;
+      border-radius: 50%;
+    }
+
+    .prev { left: 10px; }
+    .next { right: 10px; }
+
+    /* Header */
+    header {
+      background: linear-gradient(to right, #000, #5D4037);
+      color: #fff;
+      padding: 1em;
+    }
+
+    header h1 {
+      margin-bottom: 0.5em;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1em;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Konten */
+    main {
+      padding: 2em;
+    }
+
+    section {
+      margin-bottom: 3em;
+    }
+
+    /* Details */
+    details {
+      margin-top: 1em;
+      background: #f0f0f0;
+      padding: 1em;
+      border-radius: 6px;
+    }
+
+    /* Tabs */
+    .tabs {
+      margin: 1em 0;
+    }
+
+    .tab-btn, .sub-btn {
+      margin: 5px;
+      padding: 8px 15px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background: #ddd;
+      transition: background 0.3s;
+    }
+
+    .tab-btn.active, .sub-btn.active {
+      background: #2e472b;
+      color: #fff;
+    }
+
+    .tab-btn:hover, .sub-btn:hover {
+      background: #444;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Slideshow -->
+  <div class="slideshow-container">
+    <div class="slide"><img src="kayu1.jpg" alt="Kayu 1"></div>
+    <div class="slide"><img src="kayu2.jpg" alt="Kayu 2"></div>
+    <div class="slide"><img src="kayu3.jpg" alt="Kayu 3"></div>
+    <div class="slide"><img src="kayu4.jpg" alt="Kayu 4"></div>
+    <div class="slide"><img src="kayu5.jpg" alt="Kayu 5"></div>
+
+    <button class="prev" onclick="plusSlides(-1)">❮</button>
+    <button class="next" onclick="plusSlides(1)">❯</button>
+  </div>
+
+  <!-- Navigasi -->
+  <header>
+    <h1>WoodenFielld</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Beranda</a></li>
+        <li><a href="#artikel">Artikel</a></li>
+        <li><a href="#produk">Produk</a></li>
+        <li><a href="#bantuan">Bantuan</a></li>
+        <li><a href="#chat">Chat Bot</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Konten -->
+  <main>
+    <!-- Beranda -->
+    <section id="home">
+      <h2>Beranda</h2>
+      <p>Selamat datang di <strong>WoodenFielld</strong>, solusi terbaik untuk kebutuhan kayu dan material bangunan Anda.</p>
+      <details>
+        <summary>Tujuan</summary>
+        <p>Menyediakan kayu berkualitas tinggi dan material lain dengan pelayanan terpercaya.</p>
+      </details>
+      <details>
+        <summary>Jenis Produk</summary>
+        <p>Kami menyediakan berbagai macam kayu seperti Jati, Merbau, Mahoni, serta material pendukung lainnya.</p>
+      </details>
+    </section>
+
+    <!-- Produk dengan Tab -->
+    <section id="produk">
+      <h2>Katalog Produk</h2>
+      <div class="tabs">
+        <button class="tab-btn active" onclick="showMainTab('kayu')">Kayu</button>
+        <button class="tab-btn" onclick="showMainTab('material')">Material Lain</button>
+      </div>
+
+      <!-- Tab Konten -->
+      <div id="kayu" class="main-tab">
+        <h3>Jenis Kayu</h3>
+        <button class="sub-btn active" onclick="showSubTab('jati')">Jati</button>
+        <button class="sub-btn" onclick="showSubTab('merbau')">Merbau</button>
+        <button class="sub-btn" onclick="showSubTab('mahoni')">Mahoni</button>
+
+        <div id="jati" class="sub-tab" style="display:block;">
+          <p>Kayu Jati: terkenal kuat, tahan lama, cocok untuk furnitur.</p>
+        </div>
+        <div id="merbau" class="sub-tab">
+          <p>Kayu Merbau: tahan rayap, ideal untuk lantai dan kusen.</p>
+        </div>
+        <div id="mahoni" class="sub-tab">
+          <p>Kayu Mahoni: ringan dan indah, sering digunakan untuk interior.</p>
+        </div>
+      </div>
+
+      <div id="material" class="main-tab" style="display:none;">
+        <h3>Material Lain</h3>
+        <p>Semen, cat kayu, paku, dan perlengkapan pendukung lainnya.</p>
+      </div>
+    </section>
+
+    <!-- Bantuan -->
+    <section id="bantuan">
+      <h2>Bantuan</h2>
+      <p>Hubungi tim WoodenFielld untuk informasi lebih lanjut.</p>
+    </section>
+
+    <!-- Chat -->
+    <section id="chat">
+      <h2>Chat Bot</h2>
+      <p>Gunakan chatbot kami untuk bertanya seputar produk dan layanan.</p>
+    </section>
+
+    <!-- Kontak -->
+    <section id="kontak">
+      <h2>Kontak</h2>
+      <p>Telepon: 085219577718</p>
+      <p>Email: <a href="mailto:harddevice516@gmail.com">harddevice516@gmail.com</a></p>
+    </section>
+  </main>
+
+  <script>
+    // Slideshow
+    let slideIndex = 0;
+    let slides = document.getElementsByClassName("slide");
+    showSlides();
+
+    function showSlides() {
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }    
+      slides[slideIndex-1].style.display = "block";  
+      setTimeout(showSlides, 10000); // 10 detik
+    }
+
+    function plusSlides(n) {
+      slideIndex += n - 1;
+      if (slideIndex < 0) slideIndex = slides.length - 1;
+      if (slideIndex >= slides.length) slideIndex = 0;
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slides[slideIndex].style.display = "block";
+    }
+
+    // Tabs
+    function showMainTab(tabId) {
+      document.querySelectorAll('.main-tab').forEach(tab => tab.style.display = 'none');
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      document.getElementById(tabId).style.display = 'block';
+      event.target.classList.add('active');
+    }
+
+    function showSubTab(tabId) {
+      document.querySelectorAll('.sub-tab').forEach(tab => tab.style.display = 'none');
+      document.querySelectorAll('.sub-btn').forEach(btn => btn.classList.remove('active'));
+      document.getElementById(tabId).style.display = 'block';
+      event.target.classList.add('active');
+    }
+  </script>
+</body>
+</html>
