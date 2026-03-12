@@ -114,4 +114,27 @@
       background: #444;
       color: #fff;
     }
+
+/* Gambar produk utama */
+.produk-img{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin:40px 0;
+}
+
+/* gambar */
+.produk-img img{
+  width:300px;
+  max-width:90%;
+  height:auto;
+  border-radius:12px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.2);
+  transition:transform 0.3s ease;
+}
+
+/* efek hover */
+.produk-img img:hover{
+  transform:scale(1.05);
+}
   </style>
