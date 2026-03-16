@@ -20,3 +20,62 @@ setInterval(updateTime, 1000);
 
 // Jalankan saat halaman dibuka
 updateTime();
+
+// Slideshow
+let slideIndex = 0;
+
+function showSlides() {
+  let slides = document.getElementsByClassName("slide");
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  slideIndex++;
+
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+
+  slides[slideIndex - 1].style.display = "block";
+
+  setTimeout(showSlides, 10000); // 10 detik
+}
+
+function plusSlides(n) {
+  let slides = document.getElementsByClassName("slide");
+
+  slideIndex += n - 1;
+
+  if (slideIndex < 0) slideIndex = slides.length - 1;
+  if (slideIndex >= slides.length) slideIndex = 0;
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  slides[slideIndex].style.display = "block";
+}
+
+// Tabs utama
+function showMainTab(tabId, element) {
+  document.querySelectorAll('.main-tab').forEach(tab => tab.style.display = 'none');
+  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+
+  document.getElementById(tabId).style.display = 'block';
+  element.classList.add('active');
+}
+
+// Sub tabs
+function showSubTab(tabId, element) {
+  document.querySelectorAll('.sub-tab').forEach(tab => tab.style.display = 'none');
+  document.querySelectorAll('.sub-btn').forEach(btn => btn.classList.remove('active'));
+
+  document.getElementById(tabId).style.display = 'block';
+  element.classList.add('active');
+}
+
+// Jalankan slideshow saat halaman siap
+document.addEventListener("DOMContentLoaded", function () {
+  showSlides();
+});
