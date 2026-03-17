@@ -1,3 +1,20 @@
+document.addEventListener("DOMContentLoaded", function () {
+  let slides = document.getElementsByClassName("slide");
+
+  if (slides.length > 0) {
+    slides[0].style.display = "block"; // tampilkan slide pertama
+  }
+
+  showSlides();
+});document.addEventListener("DOMContentLoaded", function () {
+  let slides = document.getElementsByClassName("slide");
+
+  if (slides.length > 0) {
+    slides[0].style.display = "block"; // tampilkan slide pertama
+  }
+
+  showSlides();
+});
 function updateTime() {
     const now = new Date();
 
@@ -45,14 +62,17 @@ function showSlides() {
 function plusSlides(n) {
   let slides = document.getElementsByClassName("slide");
 
-  slideIndex += n - 1;
+  slideIndex += n;
 
-  if (slideIndex < 0) slideIndex = slides.length - 1;
   if (slideIndex >= slides.length) slideIndex = 0;
+  if (slideIndex < 0) slideIndex = slides.length - 1;
 
   for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
+
+  slides[slideIndex].style.display = "block";
+}
 
   slides[slideIndex].style.display = "block";
 }
@@ -79,3 +99,5 @@ function showSubTab(tabId, element) {
 document.addEventListener("DOMContentLoaded", function () {
   showSlides();
 });
+
+
