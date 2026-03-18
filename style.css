@@ -224,4 +224,10 @@ footer {
   color: #2e472b;
   font-weight: bold;
 }
+
+#artikel {
+  background-color: #6f4e37; /* warna kopi */
+  padding: 50px 20px;
+  color: white; /* biar tulisan keliatan */
+}
   </style>
