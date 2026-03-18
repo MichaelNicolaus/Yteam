@@ -171,4 +171,44 @@ footer {
   color: white;
   text-align: center;
 }
+
+/* Container tengah */
+.artikel-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+/* Card putih */
+.card {
+  background: #fff;
+  width: 260px;
+  padding: 20px;
+  border-radius: 12px;
+
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  text-align: center;
+
+  transition: 0.3s;
+}
+
+/* Hover effect */
+.card:hover {
+  transform: translateY(-8px);
+}
+
+/* Judul */
+.card h3 {
+  color: black;
+  margin-bottom: 15px;
+}
+
+/* Link */
+.card a {
+  text-decoration: none;
+  color: #2e472b;
+  font-weight: bold;
+}
   </style>
