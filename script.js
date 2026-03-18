@@ -1,52 +1,46 @@
+// Jalankan saat halaman siap
 document.addEventListener("DOMContentLoaded", function () {
-  let slides = document.getElementsByClassName("slide");
-
-  if (slides.length > 0) {
-    slides[0].style.display = "block";
-  }
-
   showSlides();
+  updateTime();
+  setInterval(updateTime, 1000);
 });
 
-=
-});document.addEventListener("DOMContentLoaded", function () {
-  let slides = document.getElementsByClassName("slide");
 
-  if (slides.length > 0) {
-    slides[0].style.display = "block"; // tampilkan slide pertama
-  }
-
-  showSlides();
-});
+// =======================
+// JAM DIGITAL
+// =======================
 function updateTime() {
-    const now = new Date();
+  const now = new Date();
 
-    let hours = now.getHours();
-    let minutes = now.getMinutes();
-    let seconds = now.getSeconds();
+  let hours = now.getHours();
+  let minutes = now.getMinutes();
+  let seconds = now.getSeconds();
 
-    // Tambah 0 jika angka < 10
-    hours = hours < 10 ? "0" + hours : hours;
-    minutes = minutes < 10 ? "0" + minutes : minutes;
-    seconds = seconds < 10 ? "0" + seconds : seconds;
+  // Tambah 0 jika angka < 10
+  hours = hours < 10 ? "0" + hours : hours;
+  minutes = minutes < 10 ? "0" + minutes : minutes;
+  seconds = seconds < 10 ? "0" + seconds : seconds;
 
-    const currentTime = hours + ":" + minutes + ":" + seconds;
+  const currentTime = hours + ":" + minutes + ":" + seconds;
 
-    document.getElementById("clock").textContent = currentTime;
+  const clock = document.getElementById("clock");
+  if (clock) {
+    clock.textContent = currentTime;
+  }
 }
 
-// Update setiap 1 detik
-setInterval(updateTime, 1000);
 
-// Jalankan saat halaman dibuka
-updateTime();
-
-// Slideshow
+// =======================
+// SLIDESHOW
+// =======================
 let slideIndex = 0;
 
 function showSlides() {
-  let slides = document.getElementsByClassName("slide");
+  const slides = document.getElementsByClassName("slide");
 
+  if (slides.length === 0) return;
+
+  // Sembunyikan semua
   for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
@@ -57,46 +51,51 @@ function showSlides() {
     slideIndex = 1;
   }
 
+  // Tampilkan slide aktif
   slides[slideIndex - 1].style.display = "block";
 
-  setTimeout(showSlides, 10000); // 10 detik
+  // Ganti slide tiap 3 detik
+  setTimeout(showSlides, 3000);
 }
 
+
+// Tombol next/prev
 function plusSlides(n) {
-  let slides = document.getElementsByClassName("slide");
+  const slides = document.getElementsByClassName("slide");
+
+  if (slides.length === 0) return;
 
   slideIndex += n;
 
   if (slideIndex >= slides.length) slideIndex = 0;
   if (slideIndex < 0) slideIndex = slides.length - 1;
 
+  // Sembunyikan semua
   for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
 
+  // Tampilkan yang dipilih
   slides[slideIndex].style.display = "block";
 }
 
-  slides[slideIndex].style.display = "block";
-}
 
-// Tabs utama
-function showMainTab(tabId, element) {
-  document.querySelectorAll('.main-tab').forEach(tab => tab.style.display = 'none');
-  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-
-  document.getElementById(tabId).style.display = 'block';
-  element.classList.add('active');
-}
-
-// Sub tabs
+// =======================
+// TAB ARTIKEL
+// =======================
 function showSubTab(tabId, element) {
-  document.querySelectorAll('.sub-tab').forEach(tab => tab.style.display = 'none');
-  document.querySelectorAll('.sub-btn').forEach(btn => btn.classList.remove('active'));
+  const tabs = document.querySelectorAll(".sub-tab");
+  const buttons = document.querySelectorAll(".sub-btn");
 
-  document.getElementById(tabId).style.display = 'block';
-  element.classList.add('active');
+  tabs.forEach(tab => tab.style.display = "none");
+  buttons.forEach(btn => btn.classList.remove("active"));
+
+  const activeTab = document.getElementById(tabId);
+  if (activeTab) {
+    activeTab.style.display = "block";
+  }
+
+  if (element) {
+    element.classList.add("active");
+  }
 }
-
-
-
