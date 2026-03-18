@@ -123,6 +123,14 @@
   margin:40px 0;
 }
 
+#produk {
+  background-image: url("pattern.png"); /* gambar kotak-kotak */
+  background-size: cover;
+  background-position: center;
+
+  padding: 50px 20px;
+}
+
 /* gambar */
 .produk-img img{
   width:300px;
