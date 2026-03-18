@@ -226,7 +226,7 @@ footer {
 }
 
 #artikel {
-  background: linear-gradient(to right, #4b2e2e, #6f4e37);
+  background-color: #f5e6d3; /* kopi susu soft */
   padding: 50px 20px;
-  color: white;
+  color: #333;
 }
