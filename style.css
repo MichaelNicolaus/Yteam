@@ -165,4 +165,10 @@
   width: 28px;
   height: 28px;
 }
+
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+}
   </style>
