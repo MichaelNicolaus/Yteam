@@ -121,12 +121,16 @@
   justify-content:center;
   align-items:center;
   margin:40px 0;
-  background-image: url("pattern.png"); /* gambar kotak-kotak */
-  background-size: cover;
-  background-position: center;
-  padding: 50px 20px;
 }
 
+#produk {
+  background-image: url("pattern.png");
+  background-size: cover;
+  background-position: center;
+  padding: 80px 20px;
+}
+
+/* KOTAK PUTIH */
 .produk-box {
   background: white;
   color: black;
