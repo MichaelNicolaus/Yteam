@@ -130,6 +130,21 @@
   padding: 50px 20px;
 }
 
+.produk-box {
+  background: white;
+  color: black;
+
+  max-width: 600px;
+  margin: auto;
+
+  padding: 25px;
+  border-radius: 12px;
+
+  text-align: center;
+
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
 /* gambar */
 .produk-img img{
   width:300px;
