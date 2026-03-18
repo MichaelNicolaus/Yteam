@@ -2,10 +2,13 @@ document.addEventListener("DOMContentLoaded", function () {
   let slides = document.getElementsByClassName("slide");
 
   if (slides.length > 0) {
-    slides[0].style.display = "block"; // tampilkan slide pertama
+    slides[0].style.display = "block";
   }
 
   showSlides();
+});
+
+=
 });document.addEventListener("DOMContentLoaded", function () {
   let slides = document.getElementsByClassName("slide");
 
@@ -95,9 +98,5 @@ function showSubTab(tabId, element) {
   element.classList.add('active');
 }
 
-// Jalankan slideshow saat halaman siap
-document.addEventListener("DOMContentLoaded", function () {
-  showSlides();
-});
 
 
