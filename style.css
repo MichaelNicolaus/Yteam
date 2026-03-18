@@ -141,16 +141,19 @@
 .wa-button {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
+
+  gap: 12px;
 
   background-color: #25D366;
   color: white;
 
-  padding: 12px 20px;
-  border-radius: 8px;
+  padding: 14px 24px;
+  border-radius: 10px;
 
   text-decoration: none;
   font-weight: bold;
+  font-size: 16px;
 
   transition: 0.3s;
 }
@@ -160,10 +163,12 @@
   transform: scale(1.05);
 }
 
-/* Icon */
+/* ICON FIX */
 .wa-icon {
-  width: 50px;
-  height: 50px;
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  display: block;
 }
 
 footer {
