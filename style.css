@@ -69,6 +69,8 @@ button:hover {
   display: inline-block;
   border: 2px solid #ccc;
   border-radius: 8px;
+
+  
 }
 
 footer {
@@ -76,3 +78,66 @@ footer {
   padding: 20px;
   background: #f4f4f4;
 }
+
+/* style.css */
+.gallery {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 30px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.scroll-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.scroll-container img {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+/* Tombol navigasi */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 50%;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+  background: rgba(0,0,0,0.8);
+}
+
+/* Indicator dots */
+.dots {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.active {
+  background-color: #333;
+}
+
