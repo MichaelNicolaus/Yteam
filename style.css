@@ -3,8 +3,8 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #fff;
-  color: #222;
+  background: #000;   /* ubah jadi hitam */
+  color: #fff;        /* teks putih agar kontras */
 }
 
 header {
@@ -15,6 +15,7 @@ header {
 .logo {
   font-size: 24px;
   font-weight: bold;
+  color: #fff; /* pastikan logo terlihat */
 }
 
 .promo {
@@ -32,10 +33,12 @@ header {
 .promo-text h1 {
   font-size: 28px;
   margin: 0;
+  color: #fff;
 }
 
 .promo-text p {
   margin: 10px 0;
+  color: #ccc; /* abu-abu agar lebih lembut */
 }
 
 button {
@@ -52,34 +55,7 @@ button:hover {
   background: #128C7E;
 }
 
-/* Scrollable gallery */
-.gallery {
-  margin: 30px 0;
-  overflow-x: auto;
-  white-space: nowrap;
-}
-
-.scroll-container {
-  display: inline-block;
-}
-
-.scroll-container img {
-  width: 200px;
-  margin: 0 10px;
-  display: inline-block;
-  border: 2px solid #ccc;
-  border-radius: 8px;
-
-  
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #f4f4f4;
-}
-
-/* style.css */
+/* Slideshow gallery */
 .gallery {
   position: relative;
   width: 100%;
@@ -87,7 +63,7 @@ footer {
   margin: 30px auto;
   overflow: hidden;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(255,255,255,0.2); /* bayangan putih tipis */
 }
 
 .scroll-container {
@@ -105,8 +81,8 @@ footer {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
-  color: white;
+  background: rgba(255,255,255,0.3);
+  color: #fff;
   border: none;
   padding: 10px;
   cursor: pointer;
@@ -118,7 +94,7 @@ footer {
 .next { right: 10px; }
 
 .prev:hover, .next:hover {
-  background: rgba(0,0,0,0.8);
+  background: rgba(255,255,255,0.6);
 }
 
 /* Indicator dots */
@@ -131,13 +107,19 @@ footer {
   height: 12px;
   width: 12px;
   margin: 0 5px;
-  background-color: #bbb;
+  background-color: #555;
   border-radius: 50%;
   display: inline-block;
   cursor: pointer;
 }
 
 .active {
-  background-color: #333;
+  background-color: #fff;
 }
 
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111; /* footer hitam pekat */
+  color: #fff;
+}
