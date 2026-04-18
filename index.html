@@ -1,163 +1,37 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yteam</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yeateam Studio</title>
   <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
-
-  <!-- Slideshow -->
-  <div class="slideshow-container">
-    <div class="slide"><img src="Yteam.jpg" alt="Kayu 1"></div>
-    <div class="slide"><img src="anak.png" alt="Kayu 2"></div>
-    <div class="slide"><img src="Logo Yteam.png" alt="Kayu 3"></div>
-    <div class="slide"><img src="Yteam.jpg" alt="Kayu 4"></div>
-    <div class="slide"><img src="Yteam1.jpg" alt="Kayu 5"></div>
-
-    <button class="prev" onclick="plusSlides(-1)">❮</button>
-    <button class="next" onclick="plusSlides(1)">❯</button>
-  </div>
-
-  <!-- Navigasi -->
+  <!-- Header -->
   <header>
-    <h1>Yteam</h1>
-    <nav>
-      <ul>
-        <li><a href="#home">Top Donatur</a></li>
-        <li><a href="#artikel">Artikel</a></li>
-        <li><a href="#produk">Produk</a></li>
-        <li><a href="#chat">Chat</a></li>
-        <li><a href="#kontak">Kontak</a></li>
-      </ul>
-    </nav>
+    <div class="logo">Yeateam Studio</div>
+    <div class="promo">
+      <img src="promo1.png" alt="Promo Baju">
+      <div class="promo-text">
+        <h1>GAK LENGKAP TAPI TEGAP</h1>
+        <p>Jangan Lewatkan Baju Batch 1 Dari Yeateam Studio</p>
+        <button id="orderBtn">Pesan Sekarang</button>
+      </div>
+    </div>
   </header>
 
-  <!-- Konten -->
-  <main>
-    <!-- Beranda -->
-    <section id="home">
-      <h2>Beranda</h2>
-      <p>Selamat datang di <strong>Yteam</strong>, solusi terbaik untuk kebutuhan kayu dan material bangunan Anda.</p>
-      <details>
-        <summary>Top Donatur</summary>
-        <p>1. Rizki</p>
-        <p>2. Michael Nicolaus</p>
-
-      </details>
-      <details>
-        <summary>Jenis Produk</summary>
-        <p>Kami menyediakan berbagai jenis baju dan aksesoris lainnya .</p>
-      </details>
-    </section>
-
-    <!-- Produk dengan Tab -->
-<section id="produk">
-  <div class="produk-box">
-    <h2>Katalog Produk</h2>
-    <p>Berikut adalah jenis produk yang kami jual atau akan segera kami rilis.</p>
-  </div>
-</section>
-
-  <div class="produk-img">
-    <img src="Yteam.jpeg" alt="Yteam">
-  </div>
-
-
-</section>
-
-<section id="artikel">
-      <!-- Tab Konten -->
-      <div id="kayu" class="main-tab">
-        <h2>Artikel</h2>
-        <button class="sub-btn active" onclick="showSubTab('Nasional')">Nasional</button>
-        <button class="sub-btn" onclick="showSubTab('Internasional')">Internasional</button>
-        <button class="sub-btn" onclick="showSubTab('Yteam')">Yteam</button>
-
-        <div id="Nasional" class="sub-tab" style="display:block;">
-          <div class="artikel-container">
-        
-            <div class="card">
-              <h3>Keutamaan Menyantuni Anak Yatim</h3>
-              <a href="https://baznas.go.id/artikel/keutamaan-menyantuni-anak-yatim" target="_blank">
-                Baca Selengkapnya
-              </a>
-            </div>
-        
-            <div class="card">
-              <h3>Peran Masyarakat</h3>
-              <a href="https://www.dompetdhuafa.org/peran-masyarakat-bagi-anak-yatim" target="_blank">
-                Baca Selengkapnya
-              </a>
-            </div>
-        
-          </div>
-        </div>
-        
-        <div id="Internasional" class="sub-tab">
-          <div class="artikel-container">
-        
-            <div class="card">
-              <h3>Supporting Orphans Worldwide</h3>
-              <a href="https://www.unicef.org/stories/supporting-orphans-worldwide" target="_blank">
-                Baca Selengkapnya
-              </a>
-            </div>
-        
-            <div class="card">
-              <h3>Orphans Around the World</h3>
-              <a href="https://www.worldvision.org/child-protection-news-stories/orphans-around-the-world" target="_blank">
-                Baca Selengkapnya
-              </a>
-            </div>
-        
-          </div>
-        </div>
-
-        <div id="Yteam" class="sub-tab">
-          <div class="artikel-container">
-        
-            <div class="card">
-              <h3>Update Yteam</h3>
-              <a href="https://docs.google.com/document/d/1Kqaz_LunEkWpLIGdfHUFT4MDwLrl2Yplx4FAM07OdFo/edit?tab=t.0" target="_blank">
-                Lihat Detail
-              </a>
-            </div>
-        
-          </div>
-        </div>
-        
+  <!-- Scrollable Gallery -->
+  <section class="gallery">
+    <div class="scroll-container">
+      <img src="catalog1.png" alt="Catalog">
+      <img src="catalog2.png" alt="Article">
+      <img src="catalog3.png" alt="About Us">
+    </div>
   </section>
 
-
-  <!-- Chat -->
-<section id="chat">
-  <h2>Chat</h2>
-  <p>Tekan button untuk bertanya seputar produk dan layanan.</p>
-
-<a href="https://wa.me/6285219577718?text=Halo%20Yteam,%20saya%20ingin%20bertanya%20tentang%20produk"
-   class="wa-button"
-   target="_blank">
-
-   <img src="whatsapp.png" alt="WA" class="wa-icon">
-   Chat WhatsApp
-
-</a>
-
-</section>
-
-    <!-- Kontak -->
-    <section id="kontak">
-      <h2>Kontak</h2>
-      <p>Telepon: 085219577718</p>
-      <p>Email: <a href="mailto:harddevice516@gmail.com">harddevice516@gmail.com</a></p>
-    </section>
-  </main>
-  
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2026 Yteam</p>
+    <a href="https://instagram.com/yeateamstudio" target="_blank">Instagram</a>
   </footer>
 
   <script src="script.js"></script>
