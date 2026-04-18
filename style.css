@@ -42,18 +42,27 @@ header {
 }
 
 button {
-  background: #25D366; /* warna WhatsApp */
+  background: #25D366; /* hijau WhatsApp */
   color: white;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
   font-weight: bold;
   border-radius: 5px;
+  display: flex;              /* supaya teks & ikon sejajar */
+  align-items: center;
+  gap: 8px;                   /* jarak antara ikon dan teks */
 }
 
 button:hover {
   background: #128C7E;
 }
+
+.wa-icon {
+  width: 20px;   /* ukuran logo */
+  height: 20px;
+}
+
 
 /* Slideshow gallery */
 .gallery {
