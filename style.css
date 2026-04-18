@@ -42,7 +42,7 @@ header {
 
 .promo-text p {
   margin: 10px 0;
-  color: #333; /* abu-abu gelap agar kontras */
+  color: #fff; /* abu-abu gelap agar kontras */
 }
 
 /* Heading khusus */
@@ -50,7 +50,7 @@ header {
   font-family: 'Impact', 'Arial Black', sans-serif; /* font berbeda */
   font-size: 32px;
   margin: 0;
-  color: #fff; /* hitam agar tegas */
+  color: #fff; 
   letter-spacing: 2px;
 }
 
