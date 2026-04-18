@@ -131,3 +131,12 @@ footer {
   background: #222; /* footer abu-abu gelap */
   color: #fff;
 }
+
+.logo img {
+  max-width: 250px;   /* atur lebar maksimum logo */
+  height: auto;       /* biar tinggi menyesuaikan proporsi gambar */
+  display: block;
+  margin: 0 auto;     /* posisikan di tengah */
+  object-fit: contain; /* pastikan gambar tidak terpotong */
+}
+
