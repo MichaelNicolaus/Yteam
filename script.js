@@ -46,3 +46,10 @@ setInterval(() => {
 
 // Inisialisasi pertama
 showSlide(slideIndex);
+
+
+// script.js
+document.getElementById("scrollTopBtn").addEventListener("click", function() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
