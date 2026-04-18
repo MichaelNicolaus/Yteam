@@ -133,7 +133,7 @@ footer {
 }
 
 .logo img {
-  max-width: 250px;   /* atur lebar maksimum logo */
+  max-width: 400px;   /* atur lebar maksimum logo */
   height: auto;       /* biar tinggi menyesuaikan proporsi gambar */
   display: block;
   margin: 0 auto;     /* posisikan di tengah */
