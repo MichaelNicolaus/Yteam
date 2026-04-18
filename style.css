@@ -3,8 +3,8 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #000;   /* ubah jadi hitam */
-  color: #fff;        /* teks putih agar kontras */
+  background: #000;   /* latar belakang hitam */
+  color: #fff;        /* teks putih */
 }
 
 header {
@@ -15,7 +15,7 @@ header {
 .logo {
   font-size: 24px;
   font-weight: bold;
-  color: #fff; /* pastikan logo terlihat */
+  color: #fff;
 }
 
 .promo {
@@ -38,7 +38,7 @@ header {
 
 .promo-text p {
   margin: 10px 0;
-  color: #ccc; /* abu-abu agar lebih lembut */
+  color: #ccc; /* abu-abu agar lembut */
 }
 
 button {
@@ -49,9 +49,9 @@ button {
   cursor: pointer;
   font-weight: bold;
   border-radius: 5px;
-  display: flex;              /* supaya teks & ikon sejajar */
+  display: flex;
   align-items: center;
-  gap: 8px;                   /* jarak antara ikon dan teks */
+  gap: 8px;
 }
 
 button:hover {
@@ -59,10 +59,9 @@ button:hover {
 }
 
 .wa-icon {
-  width: 20px;   /* ukuran logo */
+  width: 20px;
   height: 20px;
 }
-
 
 /* Slideshow gallery */
 .gallery {
@@ -72,7 +71,7 @@ button:hover {
   margin: 30px auto;
   overflow: hidden;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(255,255,255,0.2); /* bayangan putih tipis */
+  box-shadow: 0 4px 10px rgba(255,255,255,0.2); /* bayangan putih */
 }
 
 .scroll-container {
