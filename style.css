@@ -231,3 +231,31 @@ footer {
 #scrollTopBtn:hover {
   background: #128C7E;
 }
+
+.ranking-box {
+  position: fixed;
+  left: 40px;
+  top: 55%;
+  transform: translateY(-50%);
+
+  background: #222;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.barcode-box {
+  position: fixed;
+  right: 40px;
+  top: 55%;
+  transform: translateY(-50%);
+
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.barcode-box img {
+  width: 120px;
+}
