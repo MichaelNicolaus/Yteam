@@ -93,7 +93,7 @@ header {
 
 .scroll-container {
   display: flex;
-  transition: transform 60s ease-in-out;
+  transition: transform 1s ease-in-out;
 }
 
 .slide {
