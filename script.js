@@ -5,7 +5,7 @@ document.getElementById("orderBtn").addEventListener("click", function() {
 
 // script.js
 let slideIndex = 0;
-const slides = document.querySelectorAll("#slideshow img");
+const slides = document.querySelectorAll(".slide");
 const dots = document.querySelectorAll(".dot");
 const slideshow = document.getElementById("slideshow");
 
