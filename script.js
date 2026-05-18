@@ -1,55 +1,117 @@
-// script.js
-document.getElementById("orderBtn").addEventListener("click", function() {
-  window.open("https://wa.me/6285219577718", "_blank"); 
+// =========================
+// Tombol WhatsApp
+// =========================
+document.getElementById("orderBtn")
+.addEventListener("click", function () {
+
+  window.open(
+    "https://wa.me/6285219577718",
+    "_blank"
+  );
+
 });
 
-// script.js
-let slideIndex = 0;
-const slides = document.querySelectorAll(".slide");
-const dots = document.querySelectorAll(".dot");
+
+// =========================
+// Slideshow
+// =========================
 const slideshow = document.getElementById("slideshow");
 
+const slides =
+document.querySelectorAll(".slide");
+
+const dots =
+document.querySelectorAll(".dot");
+
+const prevBtn =
+document.querySelector(".prev");
+
+const nextBtn =
+document.querySelector(".next");
+
+let slideIndex = 0;
+
+
+// Fungsi tampil slide
 function showSlide(index) {
-  if (index >= slides.length) slideIndex = 0;
-  if (index < 0) slideIndex = slides.length - 1;
 
-  slideshow.style.transform = `translateX(-${slideIndex * 100}%)`;
+  // Jika lebih dari slide terakhir
+  if (index >= slides.length) {
+    slideIndex = 0;
+  }
 
-  dots.forEach(dot => dot.classList.remove("active"));
-  dots[slideIndex].classList.add("active");
+  // Jika kurang dari slide pertama
+  else if (index < 0) {
+    slideIndex = slides.length - 1;
+  }
+
+  // Normal
+  else {
+    slideIndex = index;
+  }
+
+  // Geser slideshow
+  slideshow.style.transform =
+    `translateX(-${slideIndex * 100}%)`;
+
+  // Reset dots
+  dots.forEach(dot => {
+    dot.classList.remove("active");
+  });
+
+  // Aktifkan dot sesuai slide
+  if (dots[slideIndex]) {
+    dots[slideIndex]
+    .classList.add("active");
+  }
+
 }
 
-// Tombol next/prev
-document.querySelector(".next").addEventListener("click", () => {
-  slideIndex++;
-  showSlide(slideIndex);
+
+// Tombol next
+nextBtn.addEventListener("click", () => {
+  showSlide(slideIndex + 1);
 });
 
-document.querySelector(".prev").addEventListener("click", () => {
-  slideIndex--;
-  showSlide(slideIndex);
+
+// Tombol prev
+prevBtn.addEventListener("click", () => {
+  showSlide(slideIndex - 1);
 });
+
 
 // Klik dots
 dots.forEach((dot, i) => {
+
   dot.addEventListener("click", () => {
-    slideIndex = i;
-    showSlide(slideIndex);
+    showSlide(i);
   });
+
 });
+
 
 // Auto slideshow
 setInterval(() => {
-  slideIndex++;
-  showSlide(slideIndex);
-}, 3000); // ganti slide tiap 3 detik
+
+  showSlide(slideIndex + 1);
+
+}, 3000);
+
+
 
 // Inisialisasi pertama
 showSlide(slideIndex);
 
 
-// script.js
-document.getElementById("scrollTopBtn").addEventListener("click", function() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+// =========================
+// Tombol Scroll ke Atas
+// =========================
+document.getElementById("scrollTopBtn")
+.addEventListener("click", function () {
 
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+
+});
