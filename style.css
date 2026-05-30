@@ -8,9 +8,10 @@ body {
 
 /* Header */
 /* HEADER */
+/* HEADER */
 header {
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* sebelumnya center */
   justify-content: space-between;
   width: 100%;
   padding: 20px;
@@ -23,6 +24,7 @@ header {
   width: 180px;
   text-align: center;
   flex-shrink: 0;
+  padding-top: 20px;
 }
 
 /* TENGAH */
@@ -101,6 +103,7 @@ header {
   width: 150px;
   text-align: center;
   flex-shrink: 0;
+  padding-top: 20px;
 }
 
 .barcode-box img {
@@ -109,7 +112,6 @@ header {
   display: block;
   margin: 0 auto;
 }
-
 
 /* Slideshow gallery */
 .gallery {
