@@ -234,15 +234,25 @@ footer {
 
 .info-section {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 30px;
 
   width: 100%;
   margin: 40px auto;
+  padding: 0 50px;
+  box-sizing: border-box;
+}
+
+.ranking-box {
+  text-align: left;
+}
+
+.barcode-box {
+  text-align: right;
 }
 
 .barcode-box img {
   width: 450px;
+  max-width: 100%;
 }
 
