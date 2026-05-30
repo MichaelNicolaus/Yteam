@@ -11,7 +11,7 @@ body {
 /* HEADER */
 header {
   display: flex;
-  align-items: flex-start; /* sebelumnya center */
+  align-items: center; /* ganti flex-start */
   justify-content: space-between;
   width: 100%;
   padding: 20px;
@@ -24,7 +24,6 @@ header {
   width: 180px;
   text-align: center;
   flex-shrink: 0;
-  padding-top: 20px;
 }
 
 /* TENGAH */
@@ -103,7 +102,6 @@ header {
   width: 100px;
   text-align: center;
   flex-shrink: 0;
-  padding-top: 20px;
 }
 
 .barcode-box img {
