@@ -101,13 +101,13 @@ header {
 
 /* KANAN */
 .barcode-box {
-  width: 150px;
+  width: 140px;
   text-align: center;
   flex-shrink: 0;
 }
 
 .barcode-box img {
-  width: 150px;
+  width: 140px;
   height: auto;
   display: block;
   margin: 0 auto;
