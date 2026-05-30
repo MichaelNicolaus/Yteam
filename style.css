@@ -8,9 +8,14 @@ body {
 
 /* Header */
 header {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 20px;
   background: transparent;
+  width: 100%;
+  box-sizing: border-box;
+  gap: 20px;
 }
 
 .logo img {
@@ -26,13 +31,13 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
-  gap: 20px; /* jarak antar elemen */
+  gap: 20px;
+  flex: 1;
 }
 
 .promo-img {
   width: 250px;
-  clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%); /* efek trapezium */
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
 }
 
 .promo-text {
@@ -42,22 +47,20 @@ header {
 
 .promo-text p {
   margin: 10px 0;
-  color: #fff; /* abu-abu gelap agar kontras */
+  color: #fff;
 }
 
-/* Heading khusus */
 .special-heading {
-  font-family: 'Impact', 'Arial Black', sans-serif; /* font berbeda */
+  font-family: 'Impact', 'Arial Black', sans-serif;
   font-size: 32px;
   margin: 0;
-  color: #fff; 
+  color: #fff;
   letter-spacing: 2px;
 }
 
-/* Tombol WhatsApp */
 .wa-button {
-  background: #000;   /* hitam */
-  color: #fff;        /* teks putih */
+  background: #000;
+  color: #fff;
   border: none;
   padding: 12px 24px;
   cursor: pointer;
@@ -66,7 +69,7 @@ header {
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-top: 10px;   /* beri jarak dari paragraf */
+  margin-top: 10px;
 }
 
 .wa-button:hover {
@@ -76,6 +79,24 @@ header {
 .wa-icon {
   width: 20px;
   height: 20px;
+}
+
+/* Ranking kiri */
+.ranking-box {
+  min-width: 180px;
+  text-align: center;
+  order: -1; /* pindah ke paling kiri */
+}
+
+/* Barcode kanan */
+.barcode-box {
+  min-width: 250px;
+  text-align: center;
+}
+
+.barcode-box img {
+  width: 250px;
+  max-width: 100%;
 }
 
 
@@ -234,16 +255,5 @@ footer {
 
 
 
-.ranking-box {
-  text-align: left;
-}
 
-.barcode-box {
-  text-align: right;
-}
-
-.barcode-box img {
-  width: 250px;
-  max-width: 100%;
-}
 
