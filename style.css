@@ -24,6 +24,8 @@ header {
   width: 180px;
   text-align: center;
   flex-shrink: 0;
+  position: relative;
+  top: -30px;
 }
 
 /* TENGAH */
